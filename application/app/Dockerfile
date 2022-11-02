@@ -1,9 +1,7 @@
-FROM node:14.17.0
-COPY --chown=node . /home/node/app/ 
-USER 1000
-WORKDIR /home/node/app/
-COPY package.json /home/node/app/
+FROM node:10
+WORKDIR /app
+COPY package.json /app
 RUN npm install
-COPY . /home/node/app/
+COPY . /app
 CMD node app.js
 EXPOSE 3000
