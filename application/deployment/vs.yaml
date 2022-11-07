@@ -4,7 +4,7 @@ metadata:
   name: prodcustomer-vs
 spec:
   hosts:
-    - demo-api.managedorg.io
+    - "*"
   gateways:
     - gateway
   http:
